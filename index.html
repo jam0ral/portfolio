@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jean Marc Moral</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media-queries.css">
 </head>
-<body>
+<body class="dark-mode">
     <nav id="navbar">
         <div id="logo-div">
-            <a href="#landing" id="logo">@_jamoral</a>
+            <a href="#landing" id="logo" class="dark-mode">@_jamoral</a>
+            <div id="theme-toggle">
+                <div class="toggle-switch">
+                <div class="toggle-icon"><img src="./icons/moon.png" alt="Dark mode" class="icon toggle-icon"></div>
+                <div class="toggle-track"></div>
+                <div class="toggle-thumb"></div>
+                <div class="toggle-icon sun"><img src="./icons/sun.png" alt="Light mode" class="icon toggle-icon"></div>
+            </div>
+        </div>
         </div> 
         <div id="page-nav">
             <a href="#about" id="link1">about me</a></li>
@@ -19,21 +28,21 @@
         </div>
     </nav>
 
-    <section id="landing" class="section">
+    <section id="landing" class="section dark-mode">
         <div id="title">
             <div id="name">
-                <h1 id="surnm">Moral**</h1>
+                <h1 id="surnm">Jean Marc**</h1>
                 <div id="line2">
                     <h1>**</h1>
-                    <h1 id="firstnm">Jean Marc</h1>
+                    <h1 id="firstnm">Moral</h1>
                 </div>
             </div>
             <p>Computer Engineering Student</p>
         </div>
     </section>
 
-    <section id="about" class="section hidden">
-        <div id="bio">
+    <section id="about" class="section dark-mode">
+        <div id="bio" class="section dark-mode">
             <h1>ABOUT ME**</h1>
             <div id="bio-content">
                 <img src="images/portrait.jpg" alt="picture ko" class="image" id="portrait">
@@ -49,12 +58,12 @@
         </div>
     </section>
 
-    <section id="resume-section" class="section hidden">
-        <div id="resume">
+    <section id="resume-section" class="section dark-mode">
+        <div id="resume" class="section dark-mode">
             <div id="resume-header">
                 <h1>RESUME**</h1>
                 <div class="button">
-                    <a href="./Moral, J.M..pdf" target="_blank">download my resume</a>
+                    <a href="./Moral, J.M..pdf" target="_blank" id="resume-download">download my resume</a>
                 </div>
                 
             </div>
@@ -134,17 +143,17 @@
         </div>
     </section>
 
-    <section id="portfolio" class="section hidden">
+    <section id="portfolio" class="section dark-mode">
         <div id="portfolio-content">
             <div id="portfolio-header">
                 <h1>PORTFOLIO**</h1>
                 <div id="control">
                     <div>
-                        <img src="icons/angle-small-left.png" alt="" class="arrow">
+                        <img src="icons/angle-small-left.png" alt="" class="arrow" id="left-arrow">
                     </div>
 
                     <div>
-                        <img src="icons/angle-small-right.png" alt="" class="arrow">
+                        <img src="icons/angle-small-right.png" alt="" class="arrow" id="right-arrow">
                     </div>
                 </div>
                 
@@ -162,7 +171,7 @@
                 </div>
             </div>
 
-            <div id="page2" class="hidden">
+            <div id="page2" class="">
                 <div id="capstone">
                     <div id="capstone-container">
                         <img src="images/capstone1-landing.png" alt="">
@@ -183,7 +192,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section hidden">
+    <section id="contact" class="section dark-mode">
         <div id="contact-content">
             <h1>HIT ME UP**</h1>
             <div id="contact-content-container">

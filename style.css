@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 html, body{
     height: 100%;
     overflow-x: hidden;
@@ -5,6 +12,204 @@ html, body{
     color: rgb(255, 255, 227);
     background-color: rgb(16, 16, 14);
     font-family: Satoshi;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p, h1, h2, h3, h4, li, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.dark-mode{
+    color: rgb(255, 255, 227);
+    background-color: rgb(16, 16, 14);
+}
+
+.light-mode{
+    color: rgb(16, 16, 14);
+    background-color: rgb(255, 255, 227);
+}
+
+html, body, section, div, p, h1, h2, h3, h4, a, span, li, input, button, form, 
+.dark-mode, .light-mode, #navbar, #logo, #bio-text, #resume, #educ-background, 
+#work-experience, #skills, #soft-skills, #technical-skills, #contact-form, 
+#social-media, #bio, #portfolio-content, #contact-content, .socmed-link, 
+.icon, .skill-icon, .arrow, #portrait, #coding-container img, #capstone-container img,
+.input, .form-btn, #page-nav a, #resume-header .button, #capstone-text .button,
+.toggle-track, .toggle-thumb, .toggle-icon {
+    transition: all 0.3s ease;
+}
+
+#bio-text, #resume, #educ-background, #work-experience, #skills, 
+#soft-skills, #technical-skills, #portfolio-content, #contact-content, 
+#contact-form, #social-media {
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle-track {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: rgb(48, 48, 43);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.toggle-thumb {
+    position: absolute;
+    left: 63px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255, 255, 227);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .toggle-thumb {
+    transform: translateX(26px);
+    background-color: rgb(16, 16, 14);
+}
+
+.toggle-icon {
+    display: flex;
+    margin: 0 9px;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.toggle-icon img{
+    width: 100%;
+    height: auto;
+}
+
+body.light-mode .toggle-track {
+    background-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode .toggle-thumb {
+    transform: translateX(26px);
+    background-color: rgb(16, 16, 14);
+}
+
+.form-btn, .input, #resume-header .button, #capstone-text .button {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.light-mode .form-btn {
+    background-color: rgba(16, 16, 14, 0.2);
+    color: rgba(16, 16, 14, 0.6);
+}
+
+body.light-mode .input {
+    background-color: rgb(255, 255, 227);
+    border-color: rgba(16, 16, 14, 0.2);
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode .input::placeholder {
+    color: rgba(16, 16, 14, 0.4);
+}
+
+body.light-mode #navbar {
+    background-color: rgb(255, 255, 227);
+}
+
+body.light-mode #page-nav a {
+    color: rgb(16, 16, 14);
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode #logo-div {
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode #logo {
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode .icon, 
+body.light-mode .skill-icon, 
+body.light-mode .arrow {
+    filter: brightness(0) saturate(100%);
+}
+
+body.light-mode .socmed-link {
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode #bio-text, 
+body.light-mode #resume, 
+body.light-mode #educ-background, 
+body.light-mode #work-experience, 
+body.light-mode #skills, 
+body.light-mode #soft-skills, 
+body.light-mode #technical-skills, 
+body.light-mode #contact-form, 
+body.light-mode #social-media,
+body.light-mode #bio, 
+body.light-mode #portfolio-content, 
+body.light-mode #contact-content {
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+@keyframes changecolorlight {
+    100% {
+        border-bottom: 2px solid rgb(16, 16, 14);
+    }
+}
+
+body.light-mode #page-nav a:hover, 
+body.light-mode #resume-header .button:hover {  
+    animation: changecolorlight 0.15s ease-in forwards;
+}
+
+body.light-mode section, 
+body.dark-mode section {
+    display: block;
+}
+
+body.light-mode #portrait:hover, 
+body.light-mode #bio-text:hover, 
+body.light-mode #educ-background:hover, 
+body.light-mode #work-experience:hover, 
+body.light-mode #coding-container img:hover, 
+body.light-mode #capstone-container img:hover, 
+body.light-mode #soft-skills:hover, 
+body.light-mode #technical-skills:hover, 
+body.light-mode .input:hover, 
+body.light-mode #social-media:hover {
+    animation: changecolorlightmode 0.15s ease-in forwards;
+}
+
+@keyframes changecolorlightmode {
+    100% {
+        border: 2px solid rgba(16, 16, 14, 0.6);
+        background-color: rgba(16, 16, 14, 0.05);
+    }
+}
+
+@keyframes changecolorlightmode {
+    100% {
+        border: 2px solid rgba(16, 16, 14, 0.6);
+        background-color: rgba(16, 16, 14, 0.05);
+    }
 }
 
 @font-face {
@@ -24,8 +229,10 @@ html, body{
     scroll-behavior: smooth;
 }
 
-section{
-    overflow-y: hidden;
+section {
+    display: block;
+    overflow-y: visible;
+    min-height: 100vh;
 }
 
 #navbar{
@@ -47,6 +254,7 @@ section{
     width: auto;
     border-bottom: 2px solid rgb(48, 48, 43);
     width: 65%;
+    justify-content: space-between;
 }
 
 #logo{
@@ -79,6 +287,8 @@ section{
     border-bottom: 2px solid rgb(48, 48, 43);
 }
 
+
+
 #link1, #link2, #link3, #link4{
     display: flex;
     padding: 0 40px;
@@ -100,16 +310,24 @@ section{
     }
 }
 
-#landing{
+#landing {
     height: 100vh;
     padding: 80px;
+    padding-left: 40px;
     padding-top: 200px;
+    display: flex;
 }
 
-#title{
+#title {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    max-width: 100%;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
 }
 
 #name h1{
@@ -118,26 +336,25 @@ section{
     letter-spacing: -8px;
 }
 
-#line2{
+#line2 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-#firstnm{
+#firstnm {
     font-style: italic;
 }
 
 #about{
-    height: 100vh;
+    min-height: 100vh;
     padding: 60px;
-    background-color: rgb(16, 16, 14);
     align-content: center;
 }
 
 #resume-section, #portfolio{
     height: fit-content;
     padding: 60px;
-    background-color: rgb(16, 16, 14);
 }
 
 #projects{
@@ -364,10 +581,14 @@ h3{
     cursor: pointer;
 }
 
-#page1, #page2{
+#page1, #page2 {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    transition: opacity 0.3s ease, display 0s;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 #coding-container, #capstone-container{
@@ -396,9 +617,44 @@ h3{
     font-style: italic;
 }
 
+@keyframes slideOutLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+}
+
 #contact{
     padding: 60px;
-    background-color: rgb(16, 16, 14);
     align-content: center;
 }
 
@@ -488,10 +744,12 @@ h3{
     gap: 20px;
 }
 
-.socmed-container{
+.socmed-container {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
+    width: 100%;
 }
 
 .socmed-link, .input{
@@ -509,3 +767,4 @@ h3{
         background-color: rgba(48, 48, 43, 0.655);
     }
 }
+
